@@ -1,3 +1,5 @@
+Steps
+
 npm install sequelize sequelize-cli pg pg-hstore
 
 npx sequelize-cli
@@ -5,6 +7,8 @@ npx sequelize-cli
 npx sequelize-cli model:generate --name {model name} --attributes title:string,content:text,userId:integer
 
 change to this format - ex:
+
+```javascript
 module.exports = (sequelize, DataTypes) => {
 const User = sequelize.define('User', {
 name: DataTypes.STRING,
@@ -33,3 +37,4 @@ npx sequelize-cli seed:generate --name {model name}
 npx sequelize-cli db:migrate
 
 npx sequelize-cli db:migrate:undo:all
+```
